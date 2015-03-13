@@ -1,0 +1,402 @@
+html, 	body {
+	background-color: black;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-family: Ubuntu, sans-serif;
+	color: white;
+	-moz-user-select: none; /* mozilla browsers */
+	-webkit-user-select: none; /* webkit browsers */
+}
+
+select
+{
+	
+}
+
+a 
+{
+	text-decoration: none;
+}
+
+code
+{
+	font-size: 8pt;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+#tToastPopup
+{
+	position: absolute;
+	z-index: 1000;
+	top: 60px;
+	left: 5px;
+	width: 40%;
+	border-color: red;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	background-color: #804040;
+	padding: 5px;
+	display: none;
+}
+
+#Toaster
+{
+	position: absolute;
+	top: 60px;
+	left: 5px;
+	width: 40%;
+}
+
+.ToastTemplate
+{
+	z-index: 1000;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	padding: 5px;
+	display: none;
+	margin-top: 3px;
+}
+
+.ToastError
+{
+	border-color: red;
+	background-color: #804040;
+}
+
+.ToastWarning
+{
+	border-color: yellow;
+	background-color: #808040;
+}
+
+.ToastInfo
+{
+	border-color: blue;
+	background-color: #404080;
+}
+
+
+.ToastCloseButton
+{
+	float: right;
+	font-size: 8pt;
+	border-style: none none solid solid;
+	border-width: 1px;
+	border-color: inherit;
+	padding-left: 3px;
+	padding-bottom: 3px;
+	border-radius: 0 0 0 3px;
+	color: white;
+}
+
+.ToastCloseButton a
+{
+	color: inherit;
+}
+
+#ToastPopup h2
+{
+	
+	padding: 3px;
+	font-size: 10pt;
+	
+}
+
+#container {
+	width: 100%;
+	height: 100%
+}
+
+#topBar {
+	color: blue;
+	font-size: 12pt;
+	background-color: rgba(100,100,100,0.90);
+	height: 1.2em;
+	border-color: white;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 3px;
+	top: 20px;
+	position: absolute;
+	z-index: 100;
+	width: 95%;
+}
+
+
+#topBar div {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 10pt;
+	vertical-align: baseline;
+	float: left;
+}
+
+
+
+.ConditionCaption {
+	color: white;
+	float: left;
+	font-weight: bold;
+	padding-right: 7px;
+	padding-left: 4px;
+	-border-left: solid 1px #303030;
+	padding-top: 2px;
+	height: 1.3em;
+}
+
+
+.ConditionValue {
+	float: left;
+	color: yellow;
+	margin-right: 0.25em;
+	padding-top: 2px;
+}
+
+.DivBar
+{
+	border-left: solid 1px #303030;
+	height: 1.3em;
+}
+
+.CondAlerts{
+	float: left;
+	color: black;
+	text-align: center;
+	padding: 1px;
+	width: 2.1em;
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+	border-radius: 5px;
+	margin-right: 0px;
+	margin-left: 1px;
+	cursor: pointer;
+}
+
+#condAlertWarn
+{
+	background-color: #FF4141;	
+}
+
+#condAlertWatch
+{
+	background-color: yellow;	
+}
+
+#condAlertOther
+{
+	background-color: gray;	
+}
+
+#condTemp
+{
+	width: 55px;
+}
+
+#condFeels
+{
+	width: 45px;
+}
+
+#condCurrent
+{
+	width: 120px;
+}
+
+#condWind
+{
+	width: 150px;
+}
+
+#topBar select {
+	float: left;
+	-margin-top: 0;
+	font-size: 10pt;
+	font-family: Ubuntu, sans-serif;
+	border-style: none solid none none;
+	border-width: 2px;
+	background-color: rgb(80,80,80);
+	width: 16em;
+	color: white;
+}
+
+#alertPopup {
+	color: black;
+	font-size: 10pt;
+	background-color: red;
+	border-color: white;
+	border-width: 2px;
+	border-style: none solid solid solid;
+	border-radius: 0px 0px 5px 5px;
+	margin: 5px;
+	padding: 3px;
+	top: 49px;
+	left: 16.5em;
+	height: 220px;
+	min-height: 220px;
+	max-height: 320px;
+	position: absolute;
+	z-index: 110;
+	min-width: 34em;
+	max-width: 34em;
+	width: 34em;
+	overflow-y: scroll;
+	display: none;
+}
+
+#detailsPopup
+{
+	color: black;
+	font-size: 10pt;
+	background-color: rgba(100,100,100,0.90);
+	border-color: white;
+	border-width: 2px;
+	border-style: none solid solid solid;
+	border-radius: 0px 0px 5px 5px;
+	margin: 5px;
+	padding: 3px;
+	top: 49px;
+	left: 51.5em;
+	height: 120px;
+	position: absolute;
+	z-index: 110;
+	min-width: 44em;
+	max-width: 44em;
+	overflow-y: scroll;
+	-display: none;
+}
+
+#alertPopup div ul {
+	margin-left: 0px;
+	padding-left: 3px;
+	margin-top: 0px;
+}
+
+#alertPopup div ul li {
+	list-style-type: none;
+	border-bottom-style: dotted;
+	border-width: 1px;
+	border-color: black;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+#alertPopup div ul li h1
+{
+	font-weight: bold;
+	background-color: black;
+	color: white;
+}
+
+#alertPopup div ul li h2
+{
+	margin-top: 0px;
+	font-size: 9pt;
+	font-style: italic;
+}
+
+#alertPopup div ul li h2 ul
+{
+	list-style-type: disc;
+	margin-left: 10px;
+}
+
+#alertPopup div ul li h2 ul li
+{
+	color: black;
+	border-style: none;
+	padding: 0px;
+}
+
+
+
+
+#alertPopup div ul li h3
+{
+	font-size: 9pt;
+}
+
+
+#refreshData
+{
+	color: blue;
+	text-decoration: none;
+	margin-left: 10px;
+	padding-top: 3px;
+	float: left;
+	
+}
+
+#detailsDataClick
+{
+	color: white;
+	text-decoration: none;
+	margin-left: 10px;
+	padding-top: 3px;
+	float: left;
+	
+}
+
+
+.UpdatableField {
+}
+
+.detailsHeader
+{
+	margin-left: 5px;
+	margin-right: 5px;
+	color: white;
+	font-weight: bold;
+	border-bottom: dotted;
+	border-width: 1px;
+	height: 17px;
+}
+
+.detailsColumn
+{
+	float: left;
+	width: 48%;
+	height: 75%;
+	margin: 5px;
+	
+}
+
+.detailsColumn
+{
+	border-right: dotted;
+	border-width: 1px;
+	border-color: gray;
+	
+}
+
+.detailsItemCaption
+{
+	float: left;
+	color: yellow;
+	margin-right: 7px;
+	height: 20px;
+	width: 45%;
+}
+
+.detailsItemValue
+{
+	color: white;
+	height: 20px;
+}
+
